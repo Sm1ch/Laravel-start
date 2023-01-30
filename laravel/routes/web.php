@@ -21,16 +21,19 @@ Route::get('/', function () {
 Route::get('/post/1', function () {
     return view('Пост №1');
 });
-//Route::get('/test/', function () {
-//    return ('Мяу');
-//});
-//
-//Route::get('/dir/test/', function () {
-//    return ('Хасовское сообщение');
-//});
-//
-//Route::get('/post/{id}', function ($id) {
-//    return 'пост ' . $id;
-//});
+Route::get('/test/', function () {
+   return ('Мяу');
+});
+
+Route::get('/dir/test/', function () {
+   return ('Хасовское сообщение');
+});
+
+Route::get('/post/{id}', function ($id) {
+   return 'пост ' . $id; // Пост выводит под любым номером 
+});
 
 
+Route::get('/post/{name}/{surname}', function ($name, $surname) {
+		return $name . ' ' . $surname; // обрабатывает параметра входных данных имя и фамилии юзера
+});
