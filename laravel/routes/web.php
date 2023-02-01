@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,4 +66,7 @@ Route::get('/post/{name}', function ($name) {
 Route::get('/post/{name}', function ($name) {
 		//
 	})->whereAlphaNumeric('name');             // Метод ограничывает параметры цифрами и буквами (Это были шаблонные ограничение)
+	
+Route::get('/post/{id}', [PostController::class, 'show']);
 
+Route::get('/name', [UserController::class, 'show']);
