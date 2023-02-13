@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
-     {{ $text }}
+первый элемент массива: {{ $arr[1] }}
+второй элемент массива: {{ $arr[2] }}
 </body>
 </html>
