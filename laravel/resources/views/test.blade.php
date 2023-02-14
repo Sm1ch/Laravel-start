@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-первый элемент массива: {{ $arr[1] }}
-второй элемент массива: {{ $arr[2] }}
+<a href="http://href1">text1</a>
+<a href="http://href2">text2</a>
+<a href="http://href3">text3</a>
 </body>
 </html>

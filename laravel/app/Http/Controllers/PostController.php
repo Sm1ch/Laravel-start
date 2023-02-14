@@ -32,11 +32,35 @@
 	// 		return view('test', ['text' => 'Тут могла быть реклама легких колясок']);
 	// 	}
 	// }
-	class PostController extends Controller
+
+	// class PostController extends Controller
+	// {
+	// 	public function show()
+	// 	{
+	// 		return view('test', ['arr' => [1, 2]]);
+	// 	}
+	// }
+
+	class PostController extends Controller 
 	{
 		public function show()
 		{
-			return view('test', ['arr' => [1, 2]]);
+			return view('test', 
+		 [
+				[
+					'text' => 'text1',
+					'href' => 'href1',
+				],
+				[
+					'text2' => 'text2',
+					'href2' => 'href2',
+				],
+				[
+					'text3' => 'text3',
+					'href3' => 'href3',
+				],
+		] 	
+		);
 		}
 	}
 ?>
