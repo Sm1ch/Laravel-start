@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<a href="http://href1">text1</a>
-<a href="http://href2">text2</a>
-<a href="http://href3">text3</a>
+
+</table>
 </body>
 </html>
