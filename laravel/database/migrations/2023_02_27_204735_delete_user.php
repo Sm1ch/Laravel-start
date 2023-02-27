@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserTable extends Migration
+class DeleteUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('surname');
-            $table->date('date');
-            $table->timestamp('time');
+        Schema::table('user', function (Blueprint $table) {
             $table->dropColumn(['date']);
-
         });
     }
 
@@ -31,6 +25,8 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::table('user', function (Blueprint $table) {
+            //
+        });
     }
 }
