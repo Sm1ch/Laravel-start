@@ -1,6 +1,6 @@
 <?php
 	namespace App\Http\Controllers;
-	
+	use Illuminate\Support\Facades\DB;
 
 	// class PostController extends Controller
 	// {
@@ -41,5 +41,16 @@
 	// 	}
 	// }
 
-
+	class PostController extends Controller
+	{
+		public function show()
+		{
+			$users = DB::table('player')->get();
+			
+			foreach ($users as $user) {
+				dump($user->id);
+				dump($user->first_name);
+			}
+		}
+	}
 ?>
