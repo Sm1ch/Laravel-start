@@ -45,12 +45,10 @@
 	{
 		public function show()
 		{
-			$users = DB::table('player')->get();
-			
-			foreach ($users as $user) {
-				dump($user->id);
-				dump($user->first_name);
-			}
+			// $posts = DB::table('posts')->get();	// Вывод всех данных
+			// $posts = DB::table('posts')->select('name', 'text')->get(); Select 
+			return view('post.show', ['posts' => $posts]);
 		}
-	}
+		}
+	
 ?>

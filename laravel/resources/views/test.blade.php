@@ -7,7 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-
+<x-layout>
+	@foreach ($posts as $post)
+		<div>
+			<h2>{{ $post->name }}</h2>
+			<div>
+				{{ $post->text }}
+			</div>
+		</div>
+	@endforeach
+</x-layout>
 </table>
 </body>
 </html>
